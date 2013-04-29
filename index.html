@@ -1,0 +1,14 @@
+---
+layout: default
+excerpt: The website of Zachary Lewis.
+title: Blog
+excerpt: The personal blog of Zachary lewis.
+---
+
+{% for post in site.posts %}
+<hr>
+<article>
+  <h2><a href="{{post.url}}"><small>{{post.date | date_to_string}}</small><br>{{ post.title }}</a></h2>
+  <p>{{post.excerpt}}</p>
+</article>
+{% endfor %}

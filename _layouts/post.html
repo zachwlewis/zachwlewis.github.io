@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.excerpt }}">
+    <meta name="author" content="Zachary Lewis">
+    {% include style.html %}
+  </head>
+
+  <body>
+    <div id="wrap">
+    {% include navigation.html %}
+
+    <div class="container">
+
+      <h1><a href="{{page.url}}">{{ page.title }}</a></h1>
+      <p class="lead">{{page.excerpt}}</p>
+      {{ content }}
+
+    </div> <!-- /container -->
+    <div id="push"></div>
+  </div> <!-- /wrap -->
+    {% include copyright.html %}
+    {% include javascript.html %}
+
+  </body>
+</html>

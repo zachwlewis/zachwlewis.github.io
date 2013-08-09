@@ -11,7 +11,7 @@ excerpt: "Back then, \"when I grow up\" was the only option."
 
 Young Game Developers,
 
-I love hearing from you, because it gives me a chance that I never had. I knew that I wanted to make video games when I was six years old. Most kids put on all sorts of "future costumes," (fireman one day, policeman the next) but I never really thought about what I wanted to do when I grew up. On the Christmas I received an NES, my father set it up, I played it for a bit, and it struck me like a bolt: "I want to make THIS when I grow up."
+I love hearing from you, because it gives me a chance that I never had. I knew that I wanted to make video games when I was six years old. Most kids put on all sorts of "future costumes," (fireman one day, policeman the next) but I never really thought about what I wanted to do when I grew up. On the Christmas I received an NES, my father set it up, I played it for a bit, and it struck me like a bolt: "I want to make __this__ when I grow up."
 
 This is why you're incredibly lucky. Back then, "when I grow up" was the only option. The internet was in its infancy, and computer classes were a total joke. As a young adult, I had virtually no way of learning anything about software development. Jump twenty years into the future and here you are, neck-deep in high school (or whatever you call it down there) and already making video games.
 

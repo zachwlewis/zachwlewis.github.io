@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An Open Reply To Young Game Developers"
-date: 2013-09-08 06:00
+date: 2013-08-09 06:00
 comments: true
 categories:
 - games

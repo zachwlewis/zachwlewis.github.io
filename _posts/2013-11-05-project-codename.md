@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "PROJECT: CODENAME"
-date: 2013-11-05 20:00
-comments: true
+date: 2013-11-05 18:00
 categories:
 - utilities
 - web

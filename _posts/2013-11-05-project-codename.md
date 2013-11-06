@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PROJECT: CODENAME"
-date: 2013-11-09 20:00
+date: 2013-11-05 20:00
 comments: true
 categories:
 - utilities
@@ -9,8 +9,6 @@ categories:
 - javascript
 excerpt: "FOR WHEN YOU NEED A CODENAME"
 ---
-
-<pre>
 
 AJ-43K7-99X
 
@@ -26,5 +24,3 @@ FOR ANY CLASSIFIED PROJECT OR OPERATION TAKING PLACE IN __REDACTED__.
 
 __REDACTED__
 __REDACTED__, UNITED STATES ARMY
-
-</pre>

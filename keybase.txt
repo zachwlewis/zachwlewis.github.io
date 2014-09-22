@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/zachwlewis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://zacharylew.is
+  * I am zachwlewis (https://keybase.io/zachwlewis) on keybase.
+  * I have a public key with fingerprint E8F8 1FBC 04C3 A3A5 1295  3D1B 95FC 08EA B6D0 D51C
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "e8f81fbc04c3a3a512953d1b95fc08eab6d0d51c",
+            "host": "keybase.io",
+            "key_id": "95fc08eab6d0d51c",
+            "uid": "f514521186e744e04f65e31bff7ca200",
+            "username": "zachwlewis"
+        },
+        "service": {
+            "hostname": "zacharylew.is",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411416222,
+    "expire_in": 157680000,
+    "prev": "fabfeb142ff903ce88fbefe0289aef37b55e78b0b9793222bb755eaa5590057b",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMHlAnicbZFdSFRBFMd3NaXdEBYfojRLBn2p63q/P9ZSgjKS0jSFHrT1zt2Z3Zu6
+d7u7q60fJERgUZla0IdmItFDDyKVIWiJG0hI2Pbhiz5oEWg9JJKUENJcKeihYWCY
+//md/zmH8zIt2ea0h4Yf2RZ/rh+1T098j9oqs9vvtQBo+GLA0wLq0OaD9aAfmSFT
+D0aAByAZywyGGs1rnMqpAsMqAudjoCJgjZaRCkUf7RMYDVAgYIStDGID1TBy6wbR
+yMer+4j6Hz66GcACwwssw8giknge0TwWBcQxEGNJU1matsAwMoNqAyJ0s6oFmupR
+kx4GbRQgeqOuIatrq/g/jGrGCOUmGAVCphExNKOehAKRSMhjZUZiIQttQtD7x8QL
+9aCPjE4SGpEZ1o0g8DCE1CK65crwDLkiy7IUQOdCuom8ukUIkijT5FhlUKM1jwox
+ggzPYqzQnIZkGUOEEc3KioowJ0FBQJIMaahICkfsIJSIoqqCoNC0IEFgjXU2aACP
+SNpU/cQyrPuDaiRqItA2OVG9xWZ32lJTkqzl2ZwO19+VUp+22kaH8JfbO6mU8r6c
+1eX+gRc5GXvVB13PyuZTD9xt/xGf2TWYWTx267rdt1y2pyWWk3CLI/mF/Z7x9Kq8
+yZW5QEXFdHZBZXpy6UrJchW70GkMeDfKm2cP91yIOq+JG4l1dvj81ytX5YNOoWZq
+aqC3JrVo9PFgigIcN3YXL53IPf2h+a0rd+lN7Ygrae3hqnZx8VSijMqaZaneYzPc
+wnpDtH/uV8f2irUjS7UfW0s/P9227/K7Vj6WtBLvycpM08cSPSOu9979/cnFRRmO
+CXdHW34kXtLX1Vlz6ZDj+clXhWd2pNd5K+/kDXXff30cF9Sz4/Hu+Pw0+y3LX/3k
+JnT8BirwER0=
+=W1x7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zachwlewis
+
+==================================================================

@@ -165,7 +165,7 @@ It can be a pain to keep a command window open, and typing all your stuff in suc
 
 #### `bundle.bat`
 
-``` bat
+{% highlight bat %}
 @echo off
 
 set SIGNING_OPTIONS=-storetype pkcs12 -keystore "cert\supersample.p12" -storepass sspassword123
@@ -184,7 +184,8 @@ call where adt
 call adt -version
 echo $ %AIR_PACKAGE%
 call %AIR_PACKAGE%
-```
+
+{% endhighlight %}
 
 This little bad-boy will not only bundle __Super Sample__ by just double-clicking on it, but will also check the location and version of `adt`, create your output folder (if it doesn't exist) and show you the exact command it is calling. Additionally, editing it is easy since all the variables are broken out.
 

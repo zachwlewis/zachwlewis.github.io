@@ -55,7 +55,7 @@ nav li {
 	display: inline-block;
 }
 
-li a {
+nav li a {
 	display: inline-block;
 	color: black;
 	font-size: 18pt;
@@ -65,6 +65,6 @@ li a {
 	opacity: 0.8;
 }
 
-li a:hover {
+nav li a:hover {
 	border-bottom: 1px solid black;
 }

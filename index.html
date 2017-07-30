@@ -1,40 +1,21 @@
----
-layout: default
-title: Home
----
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zachary Lewis</title>
+	<link href="style.css" rel="stylesheet" />
+	<link href="landing.css" rel="stylesheet" />
+</head>
+<body>
+<div id="hero">
+	<h1>Zachary Lewis</h1>
+	<h2>UX Designer <span>&amp;</span> UI Programmer <span>&amp;</span> Software Engineer</h2>
 </div>
-
-<div class="pagination">
-  
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">&laquo; Prev</a>
-  {% else %}
-    <span class="pagination-item older">&laquo; Prev</span>
-  {% endif %}
-
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Next &raquo;</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Next &raquo;</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Next &raquo;</span>
-  {% endif %}
-  
-</div>
+<nav>
+	<ul>
+		<li><a href="./resume">Resume</a></li>
+		<li><a href="./personal">Personal</a></li>
+		<li><a href="http://github.com/zachwlewis">GitHub</a></li>
+	</ul>
+</nav>
+</body>
+</html>

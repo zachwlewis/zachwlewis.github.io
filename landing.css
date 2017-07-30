@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+}
+
+#hero {
+	background: #000a12;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 60pt;
+	margin: 0;
+	padding: 80px 0 0px 0;
+	color: #fff;
+	opacity: 0.9;
+}
+
+h2 {
+	text-align: center;
+	padding: 0 0 80px 0;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 14pt;
+	color: #fff;
+	opacity: 0.8;
+}
+
+h2 span {
+	opacity: 0.5;
+}
+
+nav ul {
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+
+nav {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	background: #fff;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+nav li {
+	display: inline-block;
+}
+
+li a {
+	display: inline-block;
+	color: black;
+	font-size: 18pt;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 5px 10px;
+	opacity: 0.8;
+}
+
+li a:hover {
+	border-bottom: 1px solid black;
+}

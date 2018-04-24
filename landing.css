@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
 body {
 	margin: 0;
+	font-family: Roboto, Helvetica, Verdana, sans-serif;
 }
 
 #hero {
@@ -57,7 +60,7 @@ nav li {
 
 nav li a {
 	display: inline-block;
-	color: black;
+	color: #607d8b;
 	font-size: 18pt;
 	font-weight: 400;
 	text-decoration: none;
@@ -65,6 +68,23 @@ nav li a {
 	opacity: 0.8;
 }
 
+
+
+
 nav li a:hover {
-	border-bottom: 1px solid black;
+	border-bottom: 2px dotted;
+}
+
+.personal {
+	color: #3f51b5;
+	border-color: #3f51b5;
+}
+
+.resume {
+	color: #009688;
+	border-color: #009688;
+}
+.github {
+	color: #607d8b;
+	border-color: #607d8b;
 }

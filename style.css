@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
+:root {
+	--primary-color: #607d8b;
+}
+
 body {
 	font-family: Roboto, Helvetica, Verdana, sans-serif;
 	background: #fff;
@@ -13,37 +17,49 @@ nav ul {
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	-webkit-padding-start: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 nav {
 	display: block;
 	text-align: center;
-	padding: 10px;
-	background: #000a12;
+	padding: 0;
+	margin: 0;
+	background: var(--primary-color);
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1000;
+	height: 60px;
 }
 
 nav li {
 	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
 
-nav li a {
+nav li a,
+nav li a:visited,
+nav li a:active,
+nav li a:link {
 	display: inline-block;
-	color: white;
+	color: rgba(255, 255, 255, 0.87);
 	font-size: 14pt;
 	font-weight: 200;
+	height: 60px;
+	line-height: 60px;
 	text-decoration: none;
-	padding: 5px 10px;
+	padding: 0 10px;
 	opacity: 0.8;
 }
 
 nav li a:hover {
-	border-bottom: 1px solid white;
-	padding: 5px 10px 4px 10px;
+	color: rgba(255, 255, 255, 0.87);
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.12);
 }
 
 img {
@@ -52,13 +68,23 @@ img {
 	position: absolute;
 }
 
+a, a:visited, a:active {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
 .project {
 	margin: 20px auto 30px auto;
 	max-width: 600px;
 }
 
 .project h1 {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid rgba(0,0,0,0.12);
 	font-weight: 200;
 	font-size: 20pt;
 	margin: 0;

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+  <title>Tales of Vesperia Tavern Waiter Tool</title>
+  <script type="text/javascript">
+  const blockKeys = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  let focusTarget = "";
+
+  function focusChord(s) {
+    focusTarget += s;
+    if (focusTarget.length >= 2)
+    {
+      focusTarget = focusTarget.substr(focusTarget.length-2, 2);
+      let element = document.getElementById(focusTarget);
+      if (element) {
+        focusTarget = "";
+        element.select();
+      }
+
+      console.log("Target:",focusTarget);
+    }
+  }
+
+  window.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+    const k = event.key.toLowerCase();
+    const isValidKey = blockKeys.includes(k) && !(event.ctrlKey || event.metaKey || event.altKey);
+    if (isValidKey)
+    {
+      focusChord(k);
+      event.preventDefault();
+      return;
+    }
+  }, true);
+    function reset(e) {
+      let list = document.getElementsByTagName("input");
+      for (var i in list) {
+        list[i].value = ""
+      }
+    }
+  </script>
+  <style>
+    html, button, input {
+      font-family: "Dank Mono", monospace;
+    }
+    .page {
+      flex-grow: 1;
+      margin: 2px;
+      width: 300px;
+    }
+    .page ol {
+      background: rgb(255, 237, 177);
+      list-style: none;
+      padding: 0;
+      margin: 4px 0;
+    }
+
+    .page ol li {
+      display: flex;
+      align-items: center;
+      padding: 1px 3px;
+    }
+
+    .page ol li:hover {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    .page ol li label {
+      flex-grow: 1;
+    }
+
+    .menu {
+      display: flex;
+      margin: auto;
+      width: 606px;
+    }
+    input {
+      width: 50px;
+      font-size: 1.0em;
+      border: 1px solid rgba(0,0,0,0.1);
+      background-color: rgba(0,0,0,0.05);
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    .menu h2 {
+      padding: 0 3px;
+    }
+    h2 {
+      margin:0;
+      line-height: 1.0em;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    button {
+      font-size: 1.0em;
+      width: 602px;
+      padding: 5px 0;
+      margin: auto;
+      display: block;
+    }
+
+    .hint {
+      font-style: italic;
+      color: rgba(0,0,0,0.4);
+    }
+
+    #instructions {
+      width: 606px;
+      margin: 10px auto;
+      color: rgba(0,0,0,0.8);
+    }
+
+    #byline {
+      text-transform: uppercase;
+      font-size: 0.9em;
+      text-align: right;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1><i>Tales of Vesperia</i> Tavern Waiter Tool</h1>
+  <div class="menu">
+    <div class="page">
+      <h2>Page 1</h2>
+        <ol>
+          <li><label for="am"><code class="hint">am </code>Amango Tea</label> <input id="am" tabindex=-1 type="number"/></li>
+          <li><label for="ss"><code class="hint">ss </code>Spicy Shrimp</label> <input id="ss" tabindex=-1 type="number"/></li>
+          <li><label for="ts"><code class="hint">ts </code>Tortoise Stew</label> <input id="ts" tabindex=-1 type="number"/></li>
+          <li><label for="ea"><code class="hint">ea </code>Earth Spirit Parfait</label> <input id="ea" tabindex=-1 type="number"/></li>
+          <li><label for="sb"><code class="hint">sb </code>Set Lunch B</label> <input id="sb" tabindex=-1 type="number"/></li>
+          <li><label for="sp"><code class="hint">sp </code>Spaghetti and Meatballs</label> <input id="sp" tabindex=-1 type="number"/></li>
+          <li><label for="to"><code class="hint">to </code>Tomato Soup</label> <input id="to" tabindex=-1 type="number"/></li>
+          <li><label for="ic"><code class="hint">ic </code>Ice Cream</label> <input id="ic" tabindex=-1 type="number"/></li>
+          <li><label for="gr"><code class="hint">gr </code>Grilled Fish</label> <input id="gr" tabindex=-1 type="number"/></li>
+          <li><label for="ma"><code class="hint">ma </code>Mandragosso</label> <input id="ma" tabindex=-1 type="number"/></li>
+        </ol>
+    </div>
+    <div class="page">
+      <h2>Page 2</h2>
+      <ol>
+        <li><label for="po"><code class="hint">po </code>Polwigle Dumpling</label> <input id="po" tabindex=-1 type="number"/></li>
+        <li><label for="cu"><code class="hint">cu </code>Mabo Curry</label> <input id="cu" tabindex=-1 type="number"/></li>
+        <li><label for="do"><code class="hint">do </code>Don's Special</label> <input id="do" tabindex=-1 type="number"/></li>
+        <li><label for="cl"><code class="hint">cl </code>Clam Chowder</label> <input id="cl" tabindex=-1 type="number"/></li>
+        <li><label for="se"><code class="hint">se </code>Seafood Pasta</label> <input id="se" tabindex=-1 type="number"/></li>
+        <li><label for="fr"><code class="hint">fr </code>Fruit Cocktail</label> <input id="fr" tabindex=-1 type="number"/></li>
+        <li><label for="ra"><code class="hint">ra </code>Rappig Steak</label> <input id="ra" tabindex=-1 type="number"/></li>
+        <li><label for="cs"><code class="hint">cs </code>Cream Stew</label> <input id="cs" tabindex=-1 type="number"/></li>
+        <li><label for="ch"><code class="hint">ch </code>Chocolate Cake</label> <input id="ch" tabindex=-1 type="number"/></li>
+        <li><label for="sa"><code class="hint">sa </code>Set Lunch A</label> <input id="sa" tabindex=-1 type="number"/></li>
+      </ol>
+    </div>
+  </div>
+   
+  <button onclick="reset()">Reset</button>
+
+  <div id="instructions">
+    <h2>Overview</h2>
+    <p>This is a tool designed to help with rembering an order during the tavern waiter mini-game in <i>Tales of Vesperia</i>. Items are displayed in the same order as in the game, which should increase menuing speed. It has several features designed for easy use.</p>
+    <h2>Features</h2>
+    <h3>Quick Selection</h3>
+    <p>Clicking anywhere on an item will select the corresponding quantity field.</p>
+    <h3>Keyboard Selection</h3>
+    <p>Selections can be made without requiring mouse input by typing the two-letter shortcut for any item. For example, typing <strong>ra</strong> will select the quantity field for Rappig Steak.</strong></p>
+    <h3>Quick Reset</h3>
+    <p>Pressing <strong>Tab</strong> then <strong>Space</strong> or <strong>Return</strong> at any point will quickly reset the entire menu.</p>
+    <h3>Self-Contained</h3>
+    <p>Everything needed to use the tool is contained in this page. It can be downloaded and used offline if desired.</p>
+  </div>
+
+  <p id="byline">A <a href="http://zacharylew.is">Zachary Lewis</a> Joint</p>  
+
+</body>
+
+</html>

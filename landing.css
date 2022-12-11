@@ -1,90 +1,148 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"); */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600");
 
-body {
-	margin: 0;
-	font-family: Roboto, Helvetica, Verdana, sans-serif;
+:root {
+  --mono-font: "IBM Plex Mono";
+  --main-height: 0rem;
+  --main-top: 5rem;
+  --top-delay: 0.2s;
+  --size-delay: 0s;
+  --fsize: 12pt;
+  --color-1: rgba(131, 58, 180, 1);
+  --color-2: rgba(253, 29, 29, 1);
+  --color-3: rgba(252, 176, 69, 1);
+  font-size: var(--fsize);
 }
 
-#hero {
-	background: #000a12;
+@media (max-width: 50rem) {
+  :root {
+    --main-height: 100vh;
+    --main-top: 0;
+    --top-delay: 0s;
+    --size-delay: 0.2s;
+    --fsize: calc(1vw * 2);
+  }
+
+  #main {
+    transition: top 0.2s ease-in-out var(--top-delay),
+      min-height 0.2s ease-in-out var(--size-delay);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--mono-font);
+  background: rgba(0, 10, 18, 1);
+  /*background: linear-gradient(rgba(0, 10, 18, 1) 0%, rgba(0, 33, 60, 1) 100%);*/
+  min-height: 100vh;
+}
+
+#me {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#main {
+  max-width: 50rem;
+  margin-inline: auto;
+  position: relative;
+  top: var(--main-top);
+  border-width: 1rem;
+  border-style: solid;
+  border-image-slice: 1;
+  min-height: var(--main-height);
+  transition: top 0.2s ease-in-out var(--top-delay),
+    min-height 0.2s ease-in-out var(--size-delay);
+  box-sizing: border-box;
+  border-image-source: linear-gradient(
+    135deg,
+    var(--color-1) 0%,
+    var(--color-2) 50%,
+    var(--color-3) 100%
+  );
+  background: rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-	text-align: center;
-	font-weight: 100;
-	font-size: 60pt;
-	margin: 0;
-	padding: 80px 0 0px 0;
-	color: #fff;
-	opacity: 0.9;
+  font-weight: 800;
+  font-size: 5rem;
+  margin: 0;
+  padding: 1rem;
+  color: transparent;
+
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    -45deg,
+    var(--color-1) 0%,
+    var(--color-2) 50%,
+    var(--color-3) 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 4.5rem;
 }
 
 h2 {
-	text-align: center;
-	padding: 0 0 80px 0;
-	margin: 0;
-	text-transform: uppercase;
-	font-weight: 200;
-	font-size: 14pt;
-	color: #fff;
-	opacity: 0.8;
+  text-align: left;
+  margin: 0;
+  padding: 1rem;
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  opacity: 0.8;
 }
 
 h2 span {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 nav ul {
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	-webkit-padding-start: 0px;
-}
-
-nav {
-	display: block;
-	text-align: center;
-	padding: 10px;
-	background: #fff;
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 nav li {
-	display: inline-block;
+  display: inline-block;
+  flex: 1 0 auto;
 }
 
 nav li a {
-	display: inline-block;
-	color: #607d8b;
-	font-size: 18pt;
-	font-weight: 400;
-	text-decoration: none;
-	padding: 5px 10px;
-	opacity: 0.8;
+  display: flex;
+  color: #607d8b;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-
-
-
 nav li a:hover {
-	border-bottom: 2px dotted;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .personal {
-	color: #3f51b5;
-	border-color: #3f51b5;
+  color: var(--color-2);
+  border-color: #3f51b5;
 }
 
 .resume {
-	color: #009688;
-	border-color: #009688;
+  color: var(--color-1);
+  border-color: #009688;
 }
 .github {
-	color: #607d8b;
-	border-color: #607d8b;
+  color: var(--color-3);
+  border-color: #607d8b;
 }

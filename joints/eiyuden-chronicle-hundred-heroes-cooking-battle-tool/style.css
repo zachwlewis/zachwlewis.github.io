@@ -36,10 +36,15 @@ h1 {
   font-size: max(1.5rem, 3vw);
 }
 
+h2 {
+  margin-block: 0.25rem;
+}
+
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
   font-style: normal;
+  margin-block: 0.25rem;
 }
 
 h4 {

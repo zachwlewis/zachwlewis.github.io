@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metaphor Refantazio Shopping List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mask Crafting Helper</h1>
+    <h2>
+      Instructions
+      <button id="collapse-button" class="collapse-button">
+        Toggle Instructions
+      </button>
+    </h2>
+    <div id="instructions" class="hidden">
+      <p>
+        This tool helps track the Masks created and the White Masks required to
+        craft every Mask in
+        <em>Metaphor: ReFantazio</em>. As you craft Masks, check them off in the
+        <strong>Masks</strong> list. This will update the list of
+        <strong>Mask Requirements</strong> to show the ingredients needed to
+        craft the remaining Masks. Your selections are automatically saved to
+        your local storage, so you can come back to it later.
+      </p>
+      <p>
+        Some Masks require other Masks to craft. Enabling
+        <strong>Show computed ingredients</strong> will display the White Masks
+        required to craft all the Masks in the
+        <strong>Mask Requirements</strong> list.
+      </p>
+      <p>
+        I'd recommend starting this around 09/26, as you'll have access to most
+        classes and the Wary Shopkeep at Port Brilehaven who will sell White
+        Masks.
+      </p>
+      <p>
+        This data was pulled from the
+        <a href="https://game8.co/games/Metaphor-ReFantazio"
+          ><em>Metaphor: ReFantazio</em> guide from game8.co</a
+        >.
+      </p>
+    </div>
+    <div id="mask-section">
+      <div>
+        <h2>Masks</h2>
+        <ul id="masks"></ul>
+      </div>
+      <div>
+        <h2>Mask Requirements</h2>
+        <div class="options">
+          <input type="checkbox" id="show-computed-ingredients" />
+          <label for="show-computed-ingredients">
+            Show computed ingredients
+          </label>
+        </div>
+        <ul class="shoppingList" id="maskRequirements"></ul>
+        <ul class="shoppingList" id="whiteMaskRequirements"></ul>
+      </div>
+    </div>
+    <footer>A <a href="https://zacharylew.is">Zachary Lewis</a> joint.</footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

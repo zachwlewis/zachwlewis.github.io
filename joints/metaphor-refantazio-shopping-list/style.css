@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Habibi&display=swap");
+
+:root {
+  --font-family: "Habibi", serif;
+  font-family: "Habibi", serif;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: block;
+}
+
+ul li label {
+  text-decoration: none;
+}
+
+ul li label input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+#mask-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.options {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.shoppingList {
+  padding-block-end: 0.25rem;
+  margin-block-end: 0.25rem;
+  border-bottom: 1px solid gray;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.collapse-button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: rgba(255, 252, 228, 1);
+}

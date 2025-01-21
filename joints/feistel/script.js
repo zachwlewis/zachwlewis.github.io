@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const valueInput = document.getElementById("value");
-  updateOutput(0);
+  const initialValue = getURLValue();
+  valueInput.value = initialValue;
+  updateOutput(initialValue);
   // Prevent typing the minus sign
   valueInput.addEventListener("keydown", (event) => {
     if (event.key === "-") {
@@ -22,6 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOutput(value);
   });
 });
+
+function getURLValue() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  urlValue = parseInt(urlParams.get("value"));
+  if (isNaN(urlValue) || urlValue < 0) {
+    return 0;
+  }
+
+  return urlValue;
+}
 
 function updateOutput(value, span = 4) {
   v0 = Math.max(value - span, 0);

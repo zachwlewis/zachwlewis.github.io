@@ -1,0 +1,20 @@
+#outputs {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+#outputs li {
+  font-family: monospace;
+}
+
+li {
+  color: #666;
+}
+
+li.highlight {
+  color: black;
+}
+
+span.value {
+  font-weight: bold;
+}

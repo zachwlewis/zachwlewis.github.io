@@ -1,3 +1,55 @@
+:root {
+  --font-size-min: 16px;
+  --font-size-res: 2.5vw;
+  --font-size-max: 28px;
+  --font-size: clamp(
+    var(--font-size-min),
+    var(--font-size-res),
+    var(--font-size-max)
+  );
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+  line-height: 1.6;
+}
+
+/* Body and typography */
+body {
+  font-size: 1rem; /* Base size for legibility */
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Main content container */
+main {
+  text-align: left; /* Left align text on mobile */
+  width: min(100vw, 70ch);
+  padding: 1rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Typography tweaks */
+h1 {
+  font-size: 2rem; /* Larger heading for visibility */
+  margin-bottom: 1rem;
+  color: #111;
+  text-align: center;
+  font-weight: 200;
+}
+
 #outputs {
   list-style-type: none;
   padding-inline-start: 0;
@@ -13,8 +65,10 @@ li {
 
 li.highlight {
   color: black;
+  font-weight: bold;
 }
 
-span.value {
-  font-weight: bold;
+input {
+  font-size: 1rem;
+  text-align: center;
 }

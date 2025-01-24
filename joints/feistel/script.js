@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const valueInput = document.getElementById("value");
-  const initialValue = getURLValue();
-  valueInput.value = initialValue;
+  let initialValue = getURLValue() || getInputValue();
+
+  setInputValue(initialValue);
   updateOutput(initialValue);
   // Prevent typing the minus sign
   valueInput.addEventListener("keydown", (event) => {
@@ -23,20 +24,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateOutput(value);
   });
+
+  valueInput.addEventListener("change", (event) => {
+    const value = getInputValue();
+    if (isNaN(value) || value < 0) {
+      valueInput.value = "0";
+    }
+
+    updateOutput(value);
+  });
 });
+
+function getInputValue() {
+  const valueInput = document.getElementById("value");
+  return parseInt(valueInput.value);
+}
+
+function setInputValue(value) {
+  const valueInput = document.getElementById("value");
+  valueInput.value = value;
+}
 
 function getURLValue() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   urlValue = parseInt(urlParams.get("value"));
   if (isNaN(urlValue) || urlValue < 0) {
-    return 0;
+    return null;
   }
 
   return urlValue;
 }
 
-function updateOutput(value, span = 4) {
+function updateOutput(value, span = 2) {
   v0 = Math.max(value - span, 0);
   v1 = Math.min(value + span, 0xffffffff);
   const outputs = document.getElementById("outputs");
@@ -47,11 +67,9 @@ function updateOutput(value, span = 4) {
       item.classList.add("highlight");
     }
     let e = encode(i);
-    item.innerHTML = `<span class="value">${i
-      .toString(16)
-      .padStart(8, "0")}</span> &#x21D2; <span class="value">${e
-      .toString(16)
-      .padStart(8, "0")}</span>`;
+    const from = i.toString(16).padStart(8, "0");
+    const to = e.toString(16).padStart(8, "0");
+    item.innerHTML = `<code>${from} &#x21D2; ${to}</code>`;
     outputs.appendChild(item);
   }
 }

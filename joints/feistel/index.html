@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feistel Cipher</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="feistel.js"></script>
     <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="container">
-        <h1>Feistel Cipher</h1>
-        <label for="value">Value:</label>
-        <input type="number" name="value" id="value" value="0" required>
-        <ol id="outputs"></ol>
-    </div>
+  </head>
+  <body>
+    <main>
+      <h1>Feistel Cipher</h1>
+      <p>
+        A Feistel cipher is a symmetric structure used in the construction of
+        block ciphers, named after the German-born physicist and cryptographer
+        Horst Feistel. It is a design model from which many different block
+        ciphers are derived. Feistel ciphers are widely used in cryptographic
+        algorithms due to their simplicity and effectiveness.
+      </p>
+      <input type="number" name="value" id="value" value="69420" />
+      <ol id="outputs"></ol>
+      <p>
+        The Feistel structure consists of multiple rounds of processing of the
+        plaintext, where each round applies a substitution and permutation to
+        the data. The input is split into two halves, and in each round, one
+        half is modified using a round function and then combined with the other
+        half. This process is repeated for a number of rounds, typically between
+        16 and 32, depending on the specific algorithm.
+      </p>
+      <p>
+        One of the key advantages of Feistel ciphers is that they can be easily
+        inverted, allowing for both encryption and decryption using the same
+        algorithm. This is achieved by reversing the order of the round keys
+        during decryption. Examples of well-known Feistel ciphers include the
+        Data Encryption Standard (DES) and the Blowfish algorithm.
+      </p>
+    </main>
+  </body>
 </html>

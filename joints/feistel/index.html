@@ -12,6 +12,29 @@
     <main>
       <h1>Feistel Cipher</h1>
       <p>
+        As a video game UI engineer, I'm always looking for ways to add
+        complexity to things that don't need it. My current fixation is this
+        little piece of text in the bottom corner of the game.
+      </p>
+
+      <!-- prettier-ignore -->
+      <pre id="build-number">Build: <span class="value-as-number">69420</span></pre>
+
+      <p>
+        I mean, it's <em>fine</em>. It clearly shows the current build number,
+        which is extremely useful for developers and QA. My biggest issue is
+        that <strong>it's basic</strong>.
+      </p>
+
+      <p>
+        Numbers are boring. Sequential numbers are even more boring. What if,
+        instead of clearly understandable <em>numbers</em>, we add a bit of
+        flavor and obfuscate the useful information with additional steps?
+      </p>
+
+      <pre class="value-as-words"></pre>
+
+      <p>
         A Feistel cipher is a symmetric structure used in the construction of
         block ciphers, named after the German-born physicist and cryptographer
         Horst Feistel. It is a design model from which many different block
@@ -19,6 +42,14 @@
         algorithms due to their simplicity and effectiveness.
       </p>
       <input type="number" name="value" id="value" value="69420" />
+      <input
+        type="range"
+        name="value_range"
+        id="value_range"
+        value="69420"
+        min="0"
+        max="4294967296"
+      />
       <ol id="outputs"></ol>
       <p>
         The Feistel structure consists of multiple rounds of processing of the

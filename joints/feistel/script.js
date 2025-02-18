@@ -114,11 +114,13 @@ function updateOutput(value, span = 2) {
   }
 }
 
+// Takes a 16-bit value and converts it into words
 function valueToWords(value) {
-  let words = [];
-  for (let i = 0; i < 4; i++) {
-    let word = WORD_LIST[(value >> (i * 8)) & 0xff];
-    words.push(word);
-  }
-  return words.join("-");
+  // Split the value into four values in [0..255]
+  const w0 = WORD_LIST[(value >> (0 * 8)) & 0xff];
+  const w1 = WORD_LIST[(value >> (1 * 8)) & 0xff];
+  const w2 = WORD_LIST[(value >> (2 * 8)) & 0xff];
+  const w3 = WORD_LIST[(value >> (3 * 8)) & 0xff];
+  // Join the words with hyphens
+  return `${w0}-${w1}-${w2}-${w3}`;
 }

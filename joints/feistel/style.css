@@ -56,6 +56,19 @@ h1 {
   font-weight: 200;
 }
 
+h2 {
+  font-size: 1.5rem; /* Larger heading for visibility */
+  color: #111;
+  text-align: left;
+  font-weight: 200;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+p {
+  width: 100%;
+}
+
 #outputs {
   list-style-type: none;
   padding-inline-start: 0;
@@ -63,13 +76,10 @@ h1 {
 
 #outputs li {
   font-family: monospace;
-}
-
-li {
   color: #666;
 }
 
-li.highlight {
+#outputs li.highlight {
   color: black;
   font-weight: bold;
 }
@@ -77,4 +87,30 @@ li.highlight {
 input {
   font-size: 1rem;
   text-align: center;
+}
+
+.sans-card {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sans-card ul,
+.sans-card ol {
+  padding-inline-start: 1rem;
+}
+
+.sans-card h3 {
+  font-weight: 600;
+  margin-block-start: 1rem;
+  margin-block-end: 0.5rem;
+}
+
+.sans-card ::selection {
+  background-color: #95dfff;
 }

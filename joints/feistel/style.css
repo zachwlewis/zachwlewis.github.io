@@ -35,6 +35,10 @@ body {
   min-height: 100vh;
 }
 
+input[type="range"] {
+  width: 100%;
+}
+
 /* Main content container */
 main {
   text-align: left; /* Left align text on mobile */
@@ -69,17 +73,17 @@ p {
   width: 100%;
 }
 
-#outputs {
+.monolist {
   list-style-type: none;
   padding-inline-start: 0;
 }
 
-#outputs li {
+.monolist li {
   font-family: monospace;
   color: #666;
 }
 
-#outputs li.highlight {
+.monolist li.highlight {
   color: black;
   font-weight: bold;
 }

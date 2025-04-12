@@ -1,20 +1,22 @@
 // All text input fields.
-const VALUE_INPUTS = ["value"];
+let VALUE_INPUTS = [];
 // All range sliders.
-const VALUE_SLIDERS = ["value_range"];
+let VALUE_SLIDERS = [];
 
 // Word list.
 // prettier-ignore
-const WORD_LIST = ["dude","gang","frit","whine","quiche","thresh","grudge","baste","cringe","pour","wrap","twine","mice","silt","leech","slug","swing","swill","stun","yolk","blond","jest","sledge","teal","fjord","bloke","pleat","sneer","cult","skit","trawl","weave","mall","scrim","foe","torch","tart","breeze","stich","foul","smudge","trout","tong","coil","sing","trill","weigh","glume","gauge","freeze","craw","spurn","paint","swear","griffe","duck","smell","chap","duct","pear","bin","brag","maim","plot","haste","cloak","hawk","gulp","rent","scrap","kerf","reach","serf","tine","arch","tour","sprout","glide","probe","sham","squat","trump","mix","strum","fund","prude","strait","sponge","drape","whiff","gag","fizz","clique","spool","snort","chair","curb","prop","limp","bong","sconce","morgue","barre","darn","gig","realm","cur","brood","threat","guard","sore","switch","lobe","rant","pose","shed","cop","twill","czar","gut","chub","sight","nudge","squeal","flinch","cling","year","clone","stake","fuze","moat","chuff","flush","scour","awl","boar","peek","starch","crook","molt","clutch","joke","prey","tomb","rinse","stilt","strife","flirt","thrust","melt","fade","ape","gap","snack","yurt","frown","plod","noun","gore","mast","tally","snag","poop","pile","rule","broil","lush","swell","gnash","jinn","hash","dread","elf","might","rage","path","lice","binge","hate","cord","intro","horde","smock","rash","whoosh","blight","tribe","crunch","grunt","fret","junk","trim","there","bawl","course","burn","gnaw","flank","cheer","kin","fat","singe","kneel","prompt","frill","mope","rest","guile","wharf","putt","bribe","fluke","trope","breed","foal","skink","sprat","nape","crew","squad","claim","shoot","shake","zoom","gloom","scold","shrug","blot","strafe","flu","dug","wane","bisque","hoax","gnat","bro","chimp","throne","lisp","geese","shove","quote","vaunt","peon","meteor","punk","hoot","groove","haze","nurse","fleece","garb","fugue","fetch","kale","tray"]
+const WORD_LIST = ["which","there","their","about","would","these","other","words","could","write","first","water","after","where","right","think","three","years","place","sound","great","again","still","every","small","found","those","never","under","might","while","house","world","below","asked","going","large","until","along","shall","being","often","earth","began","since","study","night","light","above","paper","parts","young","story","point","times","heard","whole","white","given","means","music","miles","thing","today","later","using","money","lines","order","group","among","learn","known","space","table","early","trees","short","hands","state","black","shown","stood","front","voice","kinds","makes","comes","close","power","lived","vowel","taken","built","heart","ready","quite","class","bring","round","horse","shows","piece","green","stand","birds","start","river","tried","least","field","whose","girls","leave","added","color","third","hours","moved","plant","doing","names","forms","heavy","ideas","cried","check","floor","begin","woman","alone","plane","spell","watch","carry","wrote","clear","named","books","child","glass","human","takes","party","build","seems","blood","sides","seven","mouth","solve","north","value","death","maybe","happy","tells","gives","looks","shape","lives","steps","areas","sense","speak","force","ocean","speed","women","metal","south","grass","scale","cells","lower","sleep","wrong","pages","ships","needs","rocks","eight","major","level","total","ahead","reach","stars","store","sight","terms","catch","works","board","cover","songs","equal","stone","waves","guess","dance","spoke","break","cause","radio","weeks","lands","basic","liked","trade","fresh","final","fight","meant","drive","spent","local","waxes","knows","train","bread","homes","teeth","coast","thick","brown","clean","quiet","sugar","facts","steel","forth","rules","notes","units","peace","month","verbs","seeds","helps","sharp","visit","woods","chief","walls","cross","wings","grown","cases","foods","crops","fruit","stick","wants","stage","sheep"]
 
 document.addEventListener("DOMContentLoaded", () => {
-  let initialValue = getURLValue() || 69420;
+  let initialValue = getURLValue() || 431136;
 
   setInputValue(initialValue);
 
+  // Gather all value inputs and sliders.
+  VALUE_INPUTS = document.getElementsByClassName("value-input");
+  VALUE_SLIDERS = document.getElementsByClassName("value-slider");
   // Set up event listeners for all the numeric inputs.
-  for (let id of VALUE_INPUTS) {
-    const input = document.getElementById(id);
+  for (let input of VALUE_INPUTS) {
     // Prevent typing the minus sign
     input.addEventListener("keydown", (event) => {
       if (event.key === "-") {
@@ -47,8 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Set up event listeners for all the range sliders.
-  for (let id of VALUE_SLIDERS) {
-    const slider = document.getElementById(id);
+  for (let slider of VALUE_SLIDERS) {
     slider.addEventListener("input", (event) => {
       let value = parseInt(event.target.value);
       setInputValue(value);
@@ -58,14 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setInputValue(value) {
   // Set all the page numeric inputs to the given value.
-  for (let id of VALUE_INPUTS) {
-    const input = document.getElementById(id);
+  for (let input of VALUE_INPUTS) {
     input.value = value;
   }
 
   // Set all the page range sliders to the given value.
-  for (let id of VALUE_SLIDERS) {
-    const slider = document.getElementById(id);
+  for (let slider of VALUE_SLIDERS) {
     slider.value = value;
   }
 
@@ -77,12 +76,19 @@ function setInputValue(value) {
 
   // Set all the elements of class value-as-words to the given value.
   const wordsElements = document.getElementsByClassName("value-as-words");
-  const valueWords = valueToWords(value);
+  const valueWords = asWords(value);
   for (let elem of wordsElements) {
     elem.textContent = valueWords;
   }
 
-  updateOutput(value);
+  /// Set all the elements of class value-as-hex to the given value.
+  const hexElements = document.getElementsByClassName("value-as-hex");
+  for (let elem of hexElements) {
+    elem.textContent = asHex(value);
+  }
+
+  updateUnencodedNames(value, 4);
+  updateOutput(value, 2);
 }
 
 function getURLValue() {
@@ -96,6 +102,21 @@ function getURLValue() {
   return urlValue;
 }
 
+function updateUnencodedNames(value, span = 2) {
+  const elem = document.getElementById("unencoded-names");
+  const v0 = Math.max(value - span, 0);
+  const v1 = Math.min(value + span, 0xffffffff);
+  elem.textContent = null;
+  for (let i = v0; i <= v1; i++) {
+    const item = document.createElement("li");
+    if (i === value) {
+      item.classList.add("highlight");
+    }
+    item.textContent = `${asHex(i)} ⇒ ${asWords(i)}`;
+    elem.appendChild(item);
+  }
+}
+
 function updateOutput(value, span = 2) {
   const v0 = Math.max(value - span, 0);
   const v1 = Math.min(value + span, 0xffffffff);
@@ -107,20 +128,23 @@ function updateOutput(value, span = 2) {
       item.classList.add("highlight");
     }
     let e = encode(i);
-    const from = i.toString(16).padStart(8, "0");
-    const to = e.toString(16).padStart(8, "0");
-    item.innerHTML = `<code>${from} &#x21D2; ${to}</code>`;
+    item.innerHTML = `<code>${asHex(i)} ⇒ ${asHex(e)}</code>`;
     outputs.appendChild(item);
   }
 }
 
 // Takes a 16-bit value and converts it into words
-function valueToWords(value) {
+function asWords(value) {
   // Split the value into four values in [0..255]
   const w0 = WORD_LIST[(value >> (0 * 8)) & 0xff];
   const w1 = WORD_LIST[(value >> (1 * 8)) & 0xff];
   const w2 = WORD_LIST[(value >> (2 * 8)) & 0xff];
   const w3 = WORD_LIST[(value >> (3 * 8)) & 0xff];
   // Join the words with hyphens
-  return `${w0}-${w1}-${w2}-${w3}`;
+  return `${w3}-${w2}-${w1}-${w0}`;
+}
+
+// Takes a 16-bit value and converts it into words
+function asHex(value) {
+  return value.toString(16).padStart(8, "0");
 }

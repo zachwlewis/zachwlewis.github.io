@@ -63,22 +63,82 @@
         </ol>
       </section>
       <p>
+        According to the most recent build, we're sitting around
+        <code>900000</code>. A 16-bit number can represent values up to
+        <code>4294967296</code>, so that constraint should be fine for the
+        foreseeable future. Looking at the hex representation for our
+        upper-limit, <code>0xffffffff</code>, we can split this into four values
+        of size <code>0xff</code> (<code>256</code>). With a list of
+        <code>256</code> unique words, it should be trivial to convert a build
+        number into four words.
+      </p>
+      <pre><span class="value-as-hex"></span> &rArr; <span class="value-as-words"></span></pre>
+      <p>
+        Looks good from far, but it's far from good. While directly encoding the
+        build number as text does satisfy three of the conditions, looking at a
+        chunk of build numbers together reveals a bit of a pattern: Every chunk
+        of <code>256</code> builds only differ by <em>a single word</em>.
+      </p>
+
+      <ol class="monolist" id="unencoded-names"></ol>
+
+      <p>
+        This is obviously un-shippable. Let's update the Conditions of
+        Satisfaction to address this oversight.
+      </p>
+
+      <section class="sans-card">
+        <p>
+          As a user, I want a <strong>reversible</strong> operation that
+          converts a build number into a unique string.
+        </p>
+
+        <h3>Conditions of Satisfaction</h3>
+        <ol>
+          <li>The operation should produce a human-readable string</li>
+          <li>Every unique build number should produce a unique string</li>
+          <li>
+            For any unique build number, the operation should always produce the
+            same unique string
+          </li>
+          <li>
+            Reversing the operation should result in the original build number
+          </li>
+          <li>
+            <strong
+              >Sequential build numbers should not produce similar
+              strings</strong
+            >
+          </li>
+        </ol>
+      </section>
+
+      <!-- placeholder below -->
+      <p>
         A Feistel cipher is a symmetric structure used in the construction of
         block ciphers, named after the German-born physicist and cryptographer
         Horst Feistel. It is a design model from which many different block
         ciphers are derived. Feistel ciphers are widely used in cryptographic
         algorithms due to their simplicity and effectiveness.
       </p>
-      <input type="number" name="value" id="value" value="69420" />
+      <!-- Interaction: Encoded hex values. -->
+      <input
+        type="number"
+        name="value"
+        id="value"
+        class="value-input"
+        value="69420"
+      />
       <input
         type="range"
         name="value_range"
         id="value_range"
+        class="value-slider"
         value="69420"
         min="0"
         max="4294967296"
       />
-      <ol id="outputs"></ol>
+      <ol class="monolist" id="outputs"></ol>
       <p>
         The Feistel structure consists of multiple rounds of processing of the
         plaintext, where each round applies a substitution and permutation to

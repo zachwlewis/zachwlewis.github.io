@@ -1,359 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8" />
+    <meta name="author" content="Zachary Lewis" />
+    <meta name="description" content="UI Engineering Leader focused on scalable, accessible systems" />
     <title>Zachary Lewis</title>
+    <style>
+      body {
+        line-height: 1.5;
+        padding: 4rem;
+      }
+      ul {
+        padding-inline-start: 2rem;
+      }
+      @media print {
+        body {
+          padding: 1rem;
+        }
+
+        article {
+          break-inside: avoid-page;
+          page-break-inside: avoid;
+        }
+
+        section > article:first-of-type,
+        h2 > h3:first-of-type,
+        h3 > p:first-of-type {
+          break-before: avoid-page;
+          page-break-before: avoid;
+        }
+
+        #employment {
+          break-before: page;
+          page-break-before: always;
+        }
+
+        footer {
+          display: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="content">
-      <nav>
+    <header>
+      <h1>Zachary Lewis</h1>
+      <h2>UI Engineering Leader &amp; Technical UI Architect &amp; Software Engineer</h2>
+
+      <address>
         <ul>
-          <li><a href="../">Home</a></li>
-          <li><a href="../resume">Resume</a></li>
-          <li><a href="../personal">Personal</a></li>
-          <li><a href="http://github.com/zachwlewis">GitHub</a></li>
+          <li>
+            <a href="mailto:zachwlewis@gmail.com?subject=You're%20hired!"> zachwlewis@gmail.com </a>
+          </li>
+          <li><a href="http://zacharylew.is">http://zacharylew.is</a></li>
+          <li><a href="tel:+19318082759">+1 (931) 808-2759</a></li>
         </ul>
-      </nav>
-      <header>
-        <h1>Zachary Lewis</h1>
-        <h2>
-          UX Designer <em>&amp;</em> UI Programmer <em>&amp;</em> Software
-          Engineer
-        </h2>
-        <address>
-          <a href="mailto:zachwlewis@gmail.com?subject=You're%20hired!">
-            zachwlewis@gmail.com
-          </a>
-          <a href="http://zacharylew.is">http://zacharylew.is</a>
-          <a href="tel:+19318082759">+1 (931) 808-2759</a>
-        </address>
-      </header>
-      <main>
-        <section>
-          <h1>Projects</h1>
-          <article>
-            <h2 class="item-heading">
-              Unannounced Title (In Development) <em>Bend Studio</em>
-            </h2>
-            <p class="technologies">C++, Photoshop, Illustrator</p>
-            <ul>
-              <li>
-                UI Systems Lead, responsible for identifying and planning
-                improvements and innovations in UI
-              </li>
-              <li>Design and implementation of key UI functionality</li>
-              <li>
-                Cross-discipline prototying and implementation of UI for key
-                systems
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Unannounced Title (In Development) <em>Naughty Dog</em>
-            </h2>
-            <p class="technologies">C++, Illustrator, JavaScript, FreeType</p>
-            <ul>
-              <li>
-                Design and implementation of SVG renderer and asset pipeline.
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              DAYS GONE PC (2021) <em>Bend Studio</em>
-            </h2>
-            <p class="technologies">
-              UE4, C++, Photoshop, Illustrator, FontLab
-            </p>
-            <ul>
-              <li>Design and implementation of key menu systems</li>
-              <li>
-                Design and implementation of contextual action replacement
-              </li>
-              <li>
-                Accessibility advocate, designed and implemented accessibility
-                options and alternate input modes
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">DAYS GONE (2019) <em>Bend Studio</em></h2>
-            <p class="technologies">
-              UE4, C++, Photoshop, Illustrator, FontForge
-            </p>
-            <ul>
-              <li>Design and implementation of key menu systems</li>
-              <li>
-                Accessibility advocate, designed and implemented accessibility
-                options for subtitles, color vision imparement and touch
-                controls
-              </li>
-              <li>Designed and implemented DLC menu systems</li>
-              <li>
-                Improved and juiced most existing UI elements and systems prior
-                to launch
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Convoy Planning &amp; Highway Regulation
-              <em>Software Development Division</em>
-            </h2>
-            <p class="technologies">
-              JBoss WildFly, Java 8, Java EE 7, JSP, EJB3, Microsoft SQL Server,
-              HTML, CSS, JavaScript
-            </p>
-            <ul>
-              <li>Engineered enterprise software design</li>
-              <li>
-                Distilled system requirements and customer requests into user
-                stories
-              </li>
-              <li>
-                Authored software design documentation, project bids and metrics
-                reports
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Untitled Tank Combat Game (In Development)
-              <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">UE4, C++, Photoshop, Illustrator</p>
-            <ul>
-              <li>
-                Designed UX for core menu system, user onboarding and vehicle
-                customization
-              </li>
-              <li>Created UI for core menu system and vehicle selection</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              SOCOM Convoy Simulator <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">UE4, C++, Photoshop, Illustrator</p>
-            <ul>
-              <li>
-                Full implementation of mounted weapon pawn (UI, input, cameras,
-                weapon slot, etc.)
-              </li>
-              <li>
-                Created low-level netcode interop between UE4 and custom motion
-                platform hardware
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              America&apos;s Army Virtual Platform 4 <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">UE4, C++, Photoshop, Illustrator</p>
-            <ul>
-              <li>UX design and UI creation</li>
-              <li>Core systems design and implementation</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Air Force Video Creation Tool <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">
-              UE3, C++, UnrealScript, Scaleform, AS3, Photoshop, Illustrator,
-              Flash
-            </p>
-            <ul>
-              <li>Full UX redesign and UI rewrite</li>
-              <li>Core systems design and implementation</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">BitDungeon II <em>The Game Studio</em></h2>
-            <p class="technologies">AS3</p>
-            <ul>
-              <li>
-                Created build, packaging and Steam deployment process for Mac
-              </li>
-              <li>Integrated SteamWorks</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Various Army Trainers &amp; Simulations <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">
-              UE3, Unity, C++, UnrealScript, Scaleform, AS3, AS2, Photoshop,
-              Illustrator, Flash, Premiere
-            </p>
-            <ul>
-              <li>UX design and UI creation</li>
-              <li>Gameplay programming</li>
-              <li>Systems design and implementation</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              America&apos;s Army Virtual Platform 3 <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">
-              UE3, C++, UnrealScript, Scaleform, AS3, AS2, Photoshop,
-              Illustrator, Flash
-            </p>
-            <ul>
-              <li>Full UX design and UI creation</li>
-              <li>Core systems design and implementation</li>
-              <li>External hardware integration</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              America&apos;s Army 3 <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">
-              UE3, C++, UnrealScript, Scaleform, AS2, Photoshop, Illustrator,
-              Flash
-            </p>
-            <ul>
-              <li>
-                UI creation (main menu, scoreboard, multi-level menus pulling
-                data from goarmy.com)
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              America&apos;s Army 2 <em>Army Game Studio</em>
-            </h2>
-            <p class="technologies">UE2, Maya, Photoshop</p>
-            <ul>
-              <li>
-                Static mesh creation (rocks, cranes, debris, impact craters,
-                etc.)
-              </li>
-              <li>
-                Geospecific world creation (New York harbor, middle-eastern
-                villages)
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Disposable Mesh Network <em>Prototype Integration Facility</em>
-            </h2>
-            <p class="technologies">C++</p>
-            <ul>
-              <li>Programmed networked motion and climate sensors</li>
-            </ul>
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Apache Rotor Coupling Retrofit
-              <em>Prototype Integration Facility</em>
-            </h2>
-            <p class="technologies">SolidWorks</p>
-            <ul>
-              <li>Created part models</li>
-              <li>
-                Printed prototypes using 3D printing and stereo lithography
-              </li>
-            </ul>
-          </article>
-        </section>
-        <section>
-          <h1>Employment</h1>
-          <h2>Sony Interactive Entertainment <em>Bend Studio</em></h2>
-          <strong>UI Systems Lead (Senior UI Engineer)</strong>, Bend, OR
-          (2018&ndash;Present)
-          <h2>US Army <em>Software Development Division</em></h2>
-          <strong>Software Engineer</strong>, Huntsville, AL (2017&ndash;2018)
-          <h2>The Game Studio <em>Freelance</em></h2>
-          <strong>Proprietor</strong>, Huntsville, AL (2010&ndash;Present)
-          <h2>US Army <em>Army Game Studio</em></h2>
-          <strong>Software Engineer</strong>, Huntsville, AL (2008&ndash;2017)
-          <h2>
-            Yulista Management Services <em>Prototype Integration Facility</em>
-          </h2>
-          <strong>Computer Operator</strong>, Huntsville, AL (2004&ndash;2007)
-        </section>
-        <section>
-          <h1>Education</h1>
-          <h2>M.S. Software Engineering</h2>
-          <strong>University of Alabama Huntsville</strong>, Huntsville, AL
-          (2010)
-          <h2>B.S. Computer Engineering</h2>
-          <strong>Tennessee Technological University</strong>, Cookeville, TN
-          (2008)
-        </section>
-        <section>
-          <h1>Personal Projects</h1>
-          <article>
-            <h2 class="item-heading">
-              Vote RPG
-              <em
-                ><a href="https://voterpg.com" target="_blank"
-                  >https://voterpg.com</a
-                ></em
-              >
-            </h2>
-            Vote RPG is a game where the players decide the rules through
-            voting.
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Stutter
-              <em
-                ><a href="http://stutterapp.com" target="_blank"
-                  >http://stutterapp.com</a
-                ></em
-              >
-            </h2>
-            A webapp for task tracking and focus management I created during
-            Fuck This Jam.
-          </article>
-          <article>
-            <h2 class="item-heading">
-              PROJECT: CODENAME
-              <em
-                ><a href="http://projectcodename.com" target="_blank"
-                  >http://projectcodename.com</a
-                ></em
-              >
-            </h2>
-            A webapp created for when you need a codename.
-          </article>
-          <article>
-            <h2 class="item-heading">
-              FlashPunk Community
-              <em
-                ><a href="http://useflashpunk.net" target="_blank"
-                  >http://useflashpunk.net</a
-                ></em
-              >
-            </h2>
-            Increased visibility and use of the FlashPunk AS3 game library by
-            rebranding, creating a website, video tutorials and developer
-            community.
-          </article>
-          <article>
-            <h2 class="item-heading">
-              Award Winning Video Games
-              <em
-                ><a href="http://zacharylew.is/personal" target="_blank"
-                  >http://zacharylew.is/personal</a
-                ></em
-              >
-            </h2>
-            Created several games using FlashPunk, including Space Junk, which
-            placed first in Boing Boing&apos;s Games Inspired By Music
-            competition.
-          </article>
-        </section>
-      </main>
-    </div>
+      </address>
+    </header>
+    <main>
+      <section id="technical-focus">
+        <h2>Technical Focus</h2>
+        <ul>
+          <li>
+            Engine-agnostic UI architecture &amp; systems design with a focus on long-term maintainability and reuse
+          </li>
+          <li>
+            Unreal Engine 2&ndash;5; embedded collaboration within proprietary AAA engines (Naughty Dog internal engine,
+            Guerrilla Games&rsquo; Decima)
+          </li>
+          <li>
+            UI middleware integration across multiple generations (ActionScript &amp; Scaleform, XAML &amp; NoesisGUI),
+            balancing legacy support with forward progress
+          </li>
+          <li>
+            UI/UX design-to-implementation workflows (Adobe, Rive, Figma), from early prototyping through shipping
+          </li>
+          <li>Accessibility design &amp; implementation as a first-class system</li>
+          <li>Mentorship, technical direction, and team leadership across projects and disciplines</li>
+        </ul>
+      </section>
+
+      <section id="employment">
+        <h2>Employment</h2>
+
+        <article>
+          <h3>Crystal Dynamics</h3>
+          <p><strong>Lead UI Engineer</strong>, Remote (2023&ndash;Present)</p>
+          <ul>
+            <li>
+              Hired as studio-wide UI Engineering Lead, responsible for defining UI technical direction for Crystal
+              Dynamics' first Unreal Engine titles
+            </li>
+            <li>
+              Part of a small UI/UX leadership group functioning in lieu of a director, shaping studio-wide UI strategy,
+              priorities, and execution
+            </li>
+            <li>
+              Directed adoption and integration of NoesisGUI as the studio's UI middleware, establishing shared UI
+              architecture and engineering standards
+            </li>
+            <li>
+              Designed and developed reusable UI systems and tooling used across multiple projects, including
+              <em>Tomb Raider: Catalyst</em>, <em>Tomb Raider: The Legacy of Atlantis</em>, and additional unannounced
+              titles
+            </li>
+            <li>
+              Partnered with gameplay, design, and production teams to define UI requirements and guide features from
+              concept through implementation
+            </li>
+            <li>
+              Managed and mentored a team of UI engineers (mid&ndash;senior), including career development, performance
+              management, and navigating organizational changes
+            </li>
+            <li>
+              Collaborated closely with co-development partners (Flying Wild Hog) across time zones to ensure consistent
+              UI implementation and quality
+            </li>
+            <li>
+              Worked with third-party vendors (e.g., Noesis, Rive) and internal tech leadership to identify
+              cross-project risks and influence technical decisions
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Sony Interactive Entertainment <em>Bend Studio</em></h3>
+          <p><strong>UI Engineer &rarr; UI Systems Lead</strong>, Bend, OR/Remote (2018&ndash;2023)</p>
+          <ul>
+            <li>
+              Shipped <em>Days Gone</em> (PS4), contributing UI implementation, late-stage polish, and post-launch
+              support, including new UI for DLC challenges and game modes
+            </li>
+            <li>
+              Served as a core UI engineer on <em>Days Gone</em> (PC), refactoring UI systems to support mouse/keyboard
+              input, PC UX expectations, and expanded accessibility
+            </li>
+            <li>
+              Functioned as de facto UI Engineering Lead on a subsequent unannounced title, defining UI architecture and
+              workflows for a new project built on Decima
+            </li>
+            <li>
+              Embedded with Naughty Dog, contributing UI tooling and learning proprietary engine workflows through close
+              collaboration with their UI and engine teams
+            </li>
+            <li>
+              Led accessibility implementation across UI, input, and settings, and served as a subject-matter resource
+              across SIE—consulting with hardware teams on accessibility controller support, collaborating with
+              first-party studios, and advising storefront teams on presenting accessibility features to players
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>US Army <em>Software Development Division</em></h3>
+          <p><strong>Software Engineer (UI, Gameplay & Systems)</strong>, Huntsville, AL (2017&ndash;2018)</p>
+        </article>
+
+        <article>
+          <h3>The Game Studio <em>Freelance</em></h3>
+          <p><strong>Proprietor</strong>, Huntsville, AL (2010&ndash;Present)</p>
+        </article>
+
+        <article>
+          <h3>US Army <em>Army Game Studio</em></h3>
+          <p><strong>Software Engineer</strong>, Huntsville, AL (2008&ndash;2017)</p>
+        </article>
+
+        <article>
+          <h3>Yulista Management Services <em>Prototype Integration Facility</em></h3>
+          <p><strong>Computer Operator</strong>, Huntsville, AL (2004&ndash;2007)</p>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <article>
+          <h3>Days Gone (2019, 2021) <em>Bend Studio</em></h3>
+          <ul>
+            <li>Shipped console release, establishing the foundation for a subsequent PC refactor</li>
+            <li>
+              Lead UI refactor for PC release, adapting a console-first UI to mouse/keyboard input, PC settings
+              expectations, and expanded accessibility
+            </li>
+            <li>
+              Established input and UI patterns that avoided common &quot;bad port&quot; pitfalls and were widely
+              praised at launch
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>
+            America's Army Franchise
+            <em>Army Game Studio</em>
+          </h3>
+          <ul>
+            <li>UI/UX design and implementation for public-facing military games in Unreal Engine 2&ndash;4</li>
+            <li>Core UI systems across multiple shipped releases</li>
+            <li>Collaboration with design and gameplay teams to deliver accessible, player-facing experiences</li>
+            <li>Shipped features spanning menus, HUDs, and data-driven UI systems</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>
+            America's Army Virtual Platform &amp; Bespoke Training Simulations
+            <em>Army Game Studio</em>
+          </h3>
+          <ul>
+            <li>
+              UI and systems development for an internal Unreal Engine 3&ndash;4 platform used to rapidly deploy custom
+              training simulators
+            </li>
+            <li>Design and implementation of reusable UI frameworks supporting multiple downstream trainers</li>
+            <li>
+              Collaboration with military stakeholders to adapt UX for non-traditional users and constrained
+              environments
+            </li>
+            <li>Integration with external hardware and simulation systems where required</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>SOCOM Convoy Simulator <em>Army Game Studio</em></h3>
+          <ul>
+            <li>
+              Full implementation of mounted weapon pawn recreating the CROWS II weapon system, including UI, input,
+              cameras, and weapon systems
+            </li>
+            <li>Created low-level netcode interop between UE4 and custom motion platform hardware</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>
+            Convoy Planning &amp; Highway Regulation
+            <em>Software Development Division</em>
+          </h3>
+          <ul>
+            <li>Engineered enterprise software supporting real-world convoy planning and regulation</li>
+            <li>Translated complex stakeholder requirements into shipped systems and user workflows</li>
+            <li>Authored technical design documentation, project bids, and delivery metrics</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Contract Game Development <em>Independent/Contract</em></h3>
+          <ul>
+            <li>Shipped a commercial game to Steam, including build, packaging, and platform integration on macOS</li>
+            <li>Integrated third-party platform services to support distribution and deployment</li>
+            <li>Delivered production-ready solutions under ambiguous requirements and limited support</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Prototype Integration &amp; Hardware Systems <em>Prototype Integration Facility</em></h3>
+          <ul>
+            <li>Early-career work spanning networked sensors, physical prototyping, and hardware-adjacent software</li>
+            <li>Programming and integration of motion and environmental sensing systems</li>
+            <li>Mechanical prototyping and part modeling using SolidWorks and rapid fabrication techniques</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+
+        <article>
+          <h3>M.S. Software Engineering</h3>
+          <p><strong>University of Alabama Huntsville</strong>, Huntsville, AL (2010)</p>
+        </article>
+
+        <article>
+          <h3>B.S. Computer Engineering</h3>
+          <p><strong>Tennessee Technological University</strong>, Cookeville, TN (2008)</p>
+        </article>
+      </section>
+
+      <section id="personal-projects">
+        <h2>Personal Projects</h2>
+        <article>
+          <h3>
+            PROJECT: CODENAME
+            <em
+              ><a href="http://projectcodename.com" target="_blank" rel="noopener noreferrer"
+                >http://projectcodename.com</a
+              ></em
+            >
+          </h3>
+          <p>A webapp created for when you need a codename.</p>
+        </article>
+
+        <article>
+          <h3>
+            FlashPunk Community
+            <em
+              ><a href="http://useflashpunk.net" target="_blank" rel="noopener noreferrer"
+                >http://useflashpunk.net</a
+              ></em
+            >
+          </h3>
+          <p>
+            Increased visibility and use of the FlashPunk AS3 game library by rebranding, creating a website, video
+            tutorials and developer community.
+          </p>
+        </article>
+
+        <article>
+          <h3>
+            Award Winning Video Games
+            <em
+              ><a href="http://zacharylew.is/personal" target="_blank" rel="noopener noreferrer"
+                >http://zacharylew.is/personal</a
+              ></em
+            >
+          </h3>
+          <p>
+            Created several games using FlashPunk, including Space Junk, which placed first in Boing Boing&apos;s Games
+            Inspired By Music competition.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <small>Last updated: <time datetime="2026-01-21">January 21st, 2026</time></small>
+      </p>
+    </footer>
+
+    <!-- This resume is hand-written HTML. No frameworks were harmed. -->
   </body>
 </html>
